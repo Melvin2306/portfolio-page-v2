@@ -1,5 +1,13 @@
-import Image from 'next/image';
+import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  return <main className=""></main>;
+  return (
+    <main className="">
+      <div>
+        <p>test</p>
+      </div>
+      <Footer />
+    </main>
+  );
 }
