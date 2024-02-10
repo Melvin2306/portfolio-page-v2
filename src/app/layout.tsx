@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/ui/theme-provider';
-import { ModeToggle } from '@/components/ui/theme-toggle';
-import { EyeIcon } from 'lucide-react';
-import { sharedTitle, sharedDescription } from '@/app/shared-metadata';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ModeToggle } from "@/components/ui/theme-toggle";
+import { EyeIcon } from "lucide-react";
+import { sharedTitle, sharedDescription } from "@/app/shared-metadata";
 
-import { SideMenu } from '@/components/side-menu';
-import { MenuContent } from '@/components/side-menu-content';
-import { PROFILES } from '@/lib/constants';
-import { Analytics } from '@vercel/analytics/react';
+import { SideMenu } from "@/components/side-menu";
+import { MenuContent } from "@/components/side-menu-content";
+import { PROFILES } from "@/lib/constants";
+import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://melvinrinkleff.de'),
+  metadataBase: new URL("https://melvinrinkleff.de"),
   robots: {
     index: true,
     follow: true,
@@ -30,15 +30,15 @@ export const metadata: Metadata = {
       default: sharedTitle,
     },
     description: sharedDescription,
-    type: 'website',
-    url: '/',
+    type: "website",
+    url: "/",
     siteName: sharedTitle,
-    locale: 'de_DE',
+    locale: "de_DE",
   },
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 1,
 };
