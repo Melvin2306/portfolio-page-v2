@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { memo, useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import Balancer from 'react-wrap-balancer';
-import { ArrowLeftIcon, RadioIcon } from 'lucide-react';
+import { memo, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Balancer from "react-wrap-balancer";
+import { ArrowLeftIcon, RadioIcon } from "lucide-react";
 
-import { MobileDrawer } from '@/components/drawer';
-import { Button } from '@/components/ui/button';
-import { SCROLL_AREA_ID, MOBILE_SCROLL_THRESHOLD } from '@/lib/constants';
+import { MobileDrawer } from "@/components/drawer";
+import { Button } from "@/components/ui/button";
+import { SCROLL_AREA_ID, MOBILE_SCROLL_THRESHOLD } from "@/lib/constants";
 
 interface FloatingHeaderProps {
   scrollTitle: string;
@@ -24,8 +24,8 @@ export const FloatingHeader = memo(function FloatingHeader({
   children,
 }: FloatingHeaderProps) {
   const pathname = usePathname();
-  const isWritingPath = pathname === '/writing';
-  const isBookmarksPath = pathname === '/bookmarks';
+  const isWritingPath = pathname === "/writing";
+  const isBookmarksPath = pathname === "/bookmarks";
   const [transformValues, setTransformValues] = useState({
     translateY: 0,
     opacity: scrollTitle ? 0 : 1,
@@ -47,22 +47,22 @@ export const FloatingHeader = memo(function FloatingHeader({
                 MOBILE_SCROLL_THRESHOLD *
                   (MOBILE_SCROLL_THRESHOLD / (scrollY ** 2 / 100))) /
               100
-            ).toFixed(2)
+            ).toFixed(2),
           ),
-          0
+          0,
         ),
-        1
+        1,
       );
 
       setTransformValues({ translateY, opacity });
     };
 
     if (scrollTitle) {
-      scrollAreaElem?.addEventListener('scroll', onScroll, {
+      scrollAreaElem?.addEventListener("scroll", onScroll, {
         passive: true,
       });
     }
-    return () => scrollAreaElem?.removeEventListener('scroll', onScroll);
+    return () => scrollAreaElem?.removeEventListener("scroll", onScroll);
   }, [scrollTitle]);
 
   return (

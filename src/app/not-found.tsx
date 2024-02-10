@@ -1,8 +1,8 @@
-import { ScrollArea } from '@/components/scroll-area';
-import { FloatingHeader } from '@/components/floating-header';
-import { PageTitle } from '@/components/page-title';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { ScrollArea } from "@/components/scroll-area";
+import { FloatingHeader } from "@/components/floating-header";
+import { PageTitle } from "@/components/page-title";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (

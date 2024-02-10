@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { memo, ReactElement } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ArrowUpRightIcon, AtSignIcon } from 'lucide-react';
+import { memo, ReactElement } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ArrowUpRightIcon, AtSignIcon } from "lucide-react";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 interface NavigationLinkProps {
   href: string;
@@ -23,7 +23,7 @@ export const NavigationLink = memo(function NavigationLink({
   const pathname = usePathname();
   const iconCmp = icon ?? <AtSignIcon size={16} />;
 
-  const isInternal = href.startsWith('/');
+  const isInternal = href.startsWith("/");
   if (!isInternal) {
     return (
       <a
@@ -43,9 +43,9 @@ export const NavigationLink = memo(function NavigationLink({
 
   let isActive = false;
   if (pathname?.length > 0) {
-    const splittedPathname = pathname.split('/');
-    const currentPathname = splittedPathname[1] ?? '';
-    isActive = currentPathname === href.split('/')[1];
+    const splittedPathname = pathname.split("/");
+    const currentPathname = splittedPathname[1] ?? "";
+    isActive = currentPathname === href.split("/")[1];
   }
 
   return (
@@ -53,22 +53,22 @@ export const NavigationLink = memo(function NavigationLink({
       key={href}
       href={href}
       className={cn(
-        'group flex items-center justify-between rounded-lg p-2',
-        isActive ? 'bg-black text-white' : 'hover:bg-gray-200'
+        "group flex items-center justify-between rounded-lg p-2",
+        isActive ? "bg-black text-white" : "hover:bg-gray-200",
       )}
     >
       <span className="flex items-center gap-2">
         {iconCmp}
-        <span className={cn('font-medium', isActive && 'text-white')}>
+        <span className={cn("font-medium", isActive && "text-white")}>
           {label}
         </span>
       </span>
       {shortcutNumber && (
         <span
           className={cn(
-            'hidden h-5 w-5 place-content-center rounded border border-gray-200 bg-gray-100 text-xs font-medium text-gray-500 transition-colors duration-200 group-hover:border-gray-300 lg:grid',
+            "hidden h-5 w-5 place-content-center rounded border border-gray-200 bg-gray-100 text-xs font-medium text-gray-500 transition-colors duration-200 group-hover:border-gray-300 lg:grid",
             isActive &&
-              'border-gray-600 bg-gray-700 text-gray-200 group-hover:border-gray-600'
+              "border-gray-600 bg-gray-700 text-gray-200 group-hover:border-gray-600",
           )}
           title={`Shortcut key: ${shortcutNumber}`}
         >

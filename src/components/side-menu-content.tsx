@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
-import { NavigationLink } from '@/components/side-menu-link';
-import { PROFILES, LINKS } from '@/lib/constants';
-import { ModeToggle } from '@/components/ui/theme-toggle';
+import { NavigationLink } from "@/components/side-menu-link";
+import { PROFILES, LINKS } from "@/lib/constants";
+import { ModeToggle } from "@/components/ui/theme-toggle";
 
 export const MenuContent = () => {
   return (
