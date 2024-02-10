@@ -1,8 +1,10 @@
-import { ScrollArea } from "@/components/scroll-area";
-import { FloatingHeader } from "@/components/floating-header";
-import { PageTitle } from "@/components/page-title";
+import { ScrollArea } from '@/components/scroll-area';
+import { FloatingHeader } from '@/components/floating-header';
+import { PageTitle } from '@/components/page-title';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
-export function NotFound() {
+export default function NotFound() {
   return (
     <ScrollArea className="flex flex-col" hasScrollTitle>
       <FloatingHeader scrollTitle="Not found" />
@@ -13,6 +15,7 @@ export function NotFound() {
             This link might be broken, deleted, or moved. Nevertheless, there’s
             nothing to see here...
           </p>
+          <Link href="/">Go back to Home</Link>
         </div>
       </div>
     </ScrollArea>
