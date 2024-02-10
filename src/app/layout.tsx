@@ -10,6 +10,7 @@ import { SideMenu } from "@/components/side-menu";
 import { MenuContent } from "@/components/side-menu-content";
 import { PROFILES } from "@/lib/constants";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,6 +53,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className={inter.className}>
         <Analytics />
+        <SpeedInsights />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
