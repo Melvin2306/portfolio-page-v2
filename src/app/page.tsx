@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { PageTitle } from '@/components/page-title';
-import { FloatingHeader } from '@/components/floating-header';
-import { ScrollArea } from '@/components/scroll-area';
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { PageTitle } from "@/components/page-title";
+import { FloatingHeader } from "@/components/floating-header";
+import { ScrollArea } from "@/components/scroll-area";
 
 export default function Home() {
   return (
