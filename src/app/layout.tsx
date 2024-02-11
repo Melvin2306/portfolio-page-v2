@@ -51,22 +51,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning className={inter.className}>
-        <Analytics />
-        <SpeedInsights />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="lg:flex">
-            <SideMenu>
-              <MenuContent />
-            </SideMenu>
-            <div className="flex flex-1">{children}</div>
-          </div>
-        </ThemeProvider>
+      <body className={inter.className}>
+        {/* eslint-disable-next-line react/no-unknown-property */}
+        <main vaul-drawer-wrapper="" className="min-h-screen">
+          <Analytics />
+          <SpeedInsights />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="lg:flex">
+              <SideMenu className="relative hidden lg:flex">
+                <MenuContent />
+              </SideMenu>
+              <div className="flex flex-1">
+                <div>{children}</div>
+              </div>
+            </div>
+          </ThemeProvider>
+        </main>
       </body>
     </html>
   );
