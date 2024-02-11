@@ -31,7 +31,7 @@ export const NavigationLink = memo(function NavigationLink({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-between gap-2 rounded-lg p-2 hover:bg-gray-200"
+        className="flex items-center justify-between gap-2 rounded-lg p-2 hover:bg-emerald-400/10"
       >
         <span className="inline-flex items-center gap-4 font-medium">
           {iconCmp} {label}
@@ -54,14 +54,12 @@ export const NavigationLink = memo(function NavigationLink({
       href={href}
       className={cn(
         "group flex items-center justify-between rounded-lg p-2",
-        isActive ? "bg-black text-white" : "hover:bg-gray-200",
+        isActive ? "bg-emerald-400/20" : "hover:bg-emerald-400/10",
       )}
     >
       <span className="flex items-center gap-3">
         {iconCmp}
-        <span className={cn("font-medium", isActive && "text-white")}>
-          {label}
-        </span>
+        <span className={cn("font-medium", isActive && "")}>{label}</span>
       </span>
       {shortcutNumber && (
         <span

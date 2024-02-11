@@ -1,7 +1,20 @@
 import React from "react";
+import { PageTitle } from "@/components/page-title";
+import { FloatingHeader } from "@/components/floating-header";
+import { ScrollArea } from "@/components/scroll-area";
 
-function CV() {
-  return <div>page</div>;
+export default function CV() {
+  return (
+    <ScrollArea className="flex flex-col" hasScrollTitle>
+      <FloatingHeader scrollTitle="CV - Melvin Rinkleff" />
+      <div className="content-wrapper">
+        <div className="content">
+          <PageTitle title="CV" />
+          <div>
+            <p>page</p>
+          </div>
+        </div>
+      </div>
+    </ScrollArea>
+  );
 }
-
-export default CV;

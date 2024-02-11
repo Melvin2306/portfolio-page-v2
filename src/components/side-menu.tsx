@@ -50,7 +50,7 @@ export const SideMenu = ({
   return (
     <ScrollArea
       className={cn(
-        "hidden bg-[var(--background)] lg:flex lg:flex-col lg:border-r lg:border-b",
+        "hidden bg-[var(--background)] lg:bg-[var(--background)] lg:flex lg:flex-col lg:border-r lg:border-b",
         isInner ? "lg:w-80 xl:w-96" : "lg:w-60 xl:w-72",
       )}
     >

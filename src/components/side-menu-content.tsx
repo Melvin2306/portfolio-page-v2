@@ -11,10 +11,10 @@ export const MenuContent = () => {
       <div className="flex flex-col gap-4">
         <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
           <Image
-            src="/public/me.png"
+            src="/me.png"
             alt="Melvin Rinkleff"
-            width={50}
-            height={50}
+            width={60}
+            height={60}
             loading="lazy"
             className="rounded-full border shadow-sm mr-1"
           />
@@ -60,8 +60,8 @@ export const MenuContent = () => {
           <p>made with 🫶 in Berlin</p>
         </div>
       </div>
-      <div>
-        <p className="text-xs text-gray-500">© 2024 Melvin Rinkleff</p>
+      <div className="text-center">
+        <p className="text-xs text-gray-400">© 2024 Melvin Rinkleff</p>
       </div>
     </div>
   );
