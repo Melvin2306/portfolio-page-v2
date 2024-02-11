@@ -1,15 +1,15 @@
-import { Drawer } from "vaul";
-import { CommandIcon } from "lucide-react";
+import { Drawer } from 'vaul';
+import { LayoutGrid } from 'lucide-react';
 
-import { MenuContent } from "@/components/side-menu-content";
-import { Button } from "@/components/ui/button";
+import { MenuContent } from '@/components/side-menu-content';
+import { Button } from '@/components/ui/button';
 
 export function MobileDrawer() {
   return (
     <Drawer.Root shouldScaleBackground>
       <Button variant="outline" size="icon" title="Toggle drawer" asChild>
         <Drawer.Trigger>
-          <CommandIcon size={16} />
+          <LayoutGrid size={16} />
         </Drawer.Trigger>
       </Button>
       <Drawer.Portal>

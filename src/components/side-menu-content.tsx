@@ -1,9 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { NavigationLink } from "@/components/side-menu-link";
-import { PROFILES, LINKS } from "@/lib/constants";
-import { ModeToggle } from "@/components/ui/theme-toggle";
+import { NavigationLink } from '@/components/side-menu-link';
+import { PROFILES, LINKS } from '@/lib/constants';
+import { ModeToggle } from '@/components/ui/theme-toggle';
 
 export const MenuContent = () => {
   return (
@@ -25,7 +25,7 @@ export const MenuContent = () => {
             <span className="">Software Engineer</span>
           </div>
         </Link>
-        <div className="flex flex-col gap-1  mb-2">
+        <div className="flex flex-col gap-2  mb-2">
           {LINKS.map((link, linkIndex) => (
             <NavigationLink
               key={link.href}
@@ -42,7 +42,7 @@ export const MenuContent = () => {
         <span className="px-2 text-xs font-medium leading-relaxed ">
           Online
         </span>
-        <div className="flex flex-col gap-1 ">
+        <div className="flex flex-col gap-2 ">
           {Object.values(PROFILES).map((profile) => (
             <NavigationLink
               key={profile.url}
@@ -54,11 +54,14 @@ export const MenuContent = () => {
         </div>
       </div>
       <hr />
-      <div className="flex text-base gap-2 my-2 items-center">
+      <div className="flex text-base gap-2 my-3 items-center">
         <ModeToggle />
         <div>
           <p>made with 🫶 in Berlin</p>
         </div>
+      </div>
+      <div>
+        <p className="text-xs text-gray-500">© 2024 Melvin Rinkleff</p>
       </div>
     </div>
   );
