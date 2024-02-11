@@ -1,8 +1,8 @@
-import { Drawer } from 'vaul';
-import { LayoutGrid } from 'lucide-react';
+import { Drawer } from "vaul";
+import { LayoutGrid } from "lucide-react";
 
-import { MenuContent } from '@/components/side-menu-content';
-import { Button } from '@/components/ui/button';
+import { MenuContent } from "@/components/side-menu-content";
+import { Button } from "@/components/ui/button";
 
 export function MobileDrawer() {
   return (
