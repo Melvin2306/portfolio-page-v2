@@ -12,18 +12,20 @@ export default function Home() {
       <div className="content-wrapper">
         <div className="content">
           <PageTitle title="Home" className="lg:hidden" />
-          <p>
-            Moin 👋
-            <br />
-            I´m Melvin, a software engineering student at CODE University of
-            Applied Sciences and software engineering working student at car
-            byte based in Berlin, Germany.
-          </p>
-          <p>
-            I develop web applications in Next.js as a Full-Stack Software
-            Engineer at car byte. Previously, I worked in various roles in the
-            energy sector and earned a B.A. in Business Administration.
-          </p>
+          <div className="p-6">
+            <p>
+              Moin 👋
+              <br />
+              I´m Melvin, a software engineering student at CODE University of
+              Applied Sciences and software engineering working student at car
+              byte based in Berlin, Germany.
+            </p>
+            <p>
+              I develop web applications in Next.js as a Full-Stack Software
+              Engineer at car byte. Previously, I worked in various roles in the
+              energy sector and earned a B.A. in Business Administration.
+            </p>
+          </div>
         </div>
       </div>
     </ScrollArea>
