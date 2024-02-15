@@ -1,7 +1,7 @@
 import React from "react";
 
 function Stack() {
-  return <div>page</div>;
+  return <div>Nothing here yet...</div>;
 }
 
 export default Stack;

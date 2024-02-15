@@ -60,11 +60,6 @@ export const LINKS = [
     icon: <Wand2Icon size={16} />,
   },
   {
-    href: "/placeholder",
-    label: "Placeholder",
-    icon: <ArmchairIcon size={16} />,
-  },
-  {
     href: "/imprint",
     label: "Imprint",
     icon: <Info size={16} />,

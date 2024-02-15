@@ -40,8 +40,6 @@ export const SideMenu = ({
       router.push("/projects");
     } else if (event.code === "Digit4") {
       router.push("/stack");
-    } else if (event.code === "Digit5") {
-      router.push("/workspace");
     } else if (event.code === "Digit6") {
       router.push("/imprint");
     }
